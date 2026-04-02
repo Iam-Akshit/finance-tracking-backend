@@ -36,3 +36,45 @@ finance_backend/
 │       └── analytics.py    # API endpoints for financial summaries
 ├── requirements.txt        # Project dependencies
 └── README.md
+
+🛠️ Setup & Installation
+1. Clone or extract the project directory and open your terminal inside the root folder.
+
+2. Create and activate a virtual environment:
+
+Bash
+# Windows
+python -m venv venv
+venv\Scripts\activate
+
+# macOS/Linux
+python3 -m venv venv
+source venv/bin/activate
+3. Install the required dependencies:
+
+Bash
+pip install -r requirements.txt
+4. Start the development server:
+
+Bash
+uvicorn app.main:app --reload
+(The SQLite database finance.db will be created automatically upon starting the server).
+
+🧪 How to Test the API
+Instead of manual cURL commands, you can use the built-in interactive UI.
+
+Open your browser and navigate to: http://127.0.0.1:8000/docs
+
+Important - Authentication Headers: To test the endpoints, you must provide the following headers in the Swagger UI input form:
+
+x-user-id: Any integer (e.g., 1) to simulate a logged-in user.
+
+x-user-role: Must be one of viewer, analyst, or admin.
+
+Role Permissions:
+
+Admin: Can Create (POST), Read (GET), and Delete (DELETE) transactions, and view analytics.
+
+Analyst: Can Read (GET) transactions and view analytics (GET).
+
+Viewer: Can only Read (GET) transactions.
