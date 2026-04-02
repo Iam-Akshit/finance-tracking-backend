@@ -36,12 +36,11 @@ finance_backend/
 │       └── analytics.py    # API endpoints for financial summaries
 ├── requirements.txt        # Project dependencies
 └── README.md
+```
 
-🛠️ Setup & Installation
+##🛠️ Setup & Installation
 1. Clone or extract the project directory and open your terminal inside the root folder.
-
-2. Create and activate a virtual environment:
-
+2. Create and activate a virtual environment
 Bash
 # Windows
 python -m venv venv
@@ -60,7 +59,7 @@ Bash
 uvicorn app.main:app --reload
 (The SQLite database finance.db will be created automatically upon starting the server).
 
-🧪 How to Test the API
+##🧪 How to Test the API
 Instead of manual cURL commands, you can use the built-in interactive UI.
 
 Open your browser and navigate to: http://127.0.0.1:8000/docs
